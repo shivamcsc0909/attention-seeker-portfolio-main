@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "package:hostinger": "next build && rm -rf hostinger-build hostinger-build.zip && cp -R out hostinger-build && (cd out && zip -r ../hostinger-build.zip . -x '*.DS_Store*')",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start"
